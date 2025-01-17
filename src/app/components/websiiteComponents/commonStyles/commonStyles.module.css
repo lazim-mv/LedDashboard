@@ -127,3 +127,18 @@
 .textArea {
     min-height: 200px;
 }
+
+@media only screen and (max-width: 767px) {
+    .input {
+        width: 100%;
+    }
+
+    .mInput {
+        background-color: white;
+        padding-right: var(--mSpacing4);
+    }
+
+    .uploadArea {
+        max-width: 74.46133333333333vw;
+    }
+}

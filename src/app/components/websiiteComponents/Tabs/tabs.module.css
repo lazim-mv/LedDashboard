@@ -37,3 +37,14 @@
     height: 2px;
     background-color: #2563eb;
 }
+
+@media only screen and (max-width: 767px) {
+    .tab {
+        font-size: var(--mSpacing14);
+        padding: .5rem .5rem;
+    }
+
+    .tab:hover{
+        color: #2563eb;
+    }
+}

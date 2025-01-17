@@ -123,9 +123,117 @@
     color: #9ca3af;
 }
 
+.headerLeftItems {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing10);
+}
+
 .pagesContainer {
     padding: 0 var(--spacing30);
     padding-top: 3.4722222222222223vw;
     box-shadow: 0 4px 6px -1px rgba(165, 180, 203, 0.2);
     /* min-height: 85vh; */
+}
+
+.mobileMenuBtn {
+    display: none;
+}
+
+@media only screen and (max-width: 767px) {
+
+    .mainLayout {
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
+    .mobileMenuBtn {
+        display: flex;
+        position: fixed;
+        z-index: 9999;
+        left: var(--mSpacing24);
+        top: 6.7vw;
+    }
+
+    .sider {
+        padding: 0;
+        padding-left: var(--mSpacing24);
+        padding-top: var(--mSpacing60);
+        z-index: 99;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+    }
+
+    .siderOpen {
+        transform: translate(0px);
+        transition: all 0.4s ease;
+    }
+
+    .siderClose {
+        transform: translate(-150vw);
+        transition: all 0.4s ease;
+    }
+
+    .siderTop {
+        margin-top: var(--mSpacing8);
+        margin-bottom: var(--mSpacing30);
+    }
+
+    .ProfileContainer {
+        gap: var(--mSpacing8);
+        margin-bottom: var(--mSpacing15);
+        padding-bottom: var(--mSpacing8);
+        width: 90%;
+    }
+
+    .siderItem {
+        width: 90%;
+    }
+
+    .siderItems {
+        gap: var(--mSpacing16);
+    }
+
+    .siderItem:hover {
+        padding: var(--mSpacing8);
+        border-radius: var(--mSpacing8);
+    }
+
+    .active {
+        padding: var(--mSpacing8);
+        border-radius: var(--mSpacing8);
+    }
+
+    .header {
+        padding: 0;
+        padding-top: var(--mSpacing15);
+        height: max-content;
+        justify-content: flex-end;
+        gap: var(--mSpacing15);
+        gap: var(--mSpacing8);
+        padding-right: var(--mSpacing24);
+    }
+
+    .headerLeftItems {
+        gap: var(--mSpacing8);
+    }
+
+    .siderBottom {
+        position: relative;
+        width: 100vw;
+        left: auto;
+        bottom: auto;
+        margin-top: 40vh;
+    }
+
+    .pagesContainer {
+        padding-top: var(--mSpacing30);
+        padding-left: var(--mSpacing24);
+        padding-right: var(--mSpacing24);
+    }
 }

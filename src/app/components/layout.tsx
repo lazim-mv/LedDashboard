@@ -4,17 +4,20 @@ import styles from "./styles/layout.module.css"
 import { usePathname } from 'next/navigation';
 import { CgWebsite } from "react-icons/cg";
 import { AiOutlineFundProjectionScreen } from "react-icons/ai";
-import { HiOutlineLogout } from "react-icons/hi";
+import { HiMenuAlt2, HiOutlineLogout } from "react-icons/hi";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { IoCloseCircleOutline } from "react-icons/io5";
 import { RxAvatar } from "react-icons/rx";
 import Link from 'next/link';
 import { BiSearch } from 'react-icons/bi';
+import { CiMail } from 'react-icons/ci';
 
 type ParamType = {
     children: React.ReactNode
 }
 
 const Layout: React.FC<ParamType> = ({ children }) => {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(true);
     const pathname = usePathname();
 
     const routes = [
@@ -22,13 +25,28 @@ const Layout: React.FC<ParamType> = ({ children }) => {
         { name: 'Project', path: '/schedule', icon: AiOutlineFundProjectionScreen },
     ];
 
+    const handleCloseOrOpen = () => {
+        setIsOpen(!isOpen)
+    }
+
+
     return (
         <div className="min-h-screen bg-white">
             <div className={styles.mainLayout}>
                 {/* Sidebar */}
-                <div className={styles.sider}>
+
+                <button
+                    className={styles.mobileMenuBtn}
+                    onClick={() => setIsOpen(!isOpen)}
+                >{
+                        isOpen ?
+                            <RxHamburgerMenu size={24} /> : <IoCloseCircleOutline size={24} />
+                    }
+                </button>
+
+                <div className={`${styles.sider} ${isOpen ? styles.siderClose : styles.siderOpen}`}>
                     <div className={styles.siderTop}>
-                        <h1>LOGO</h1>
+                        <h2>LOGO</h2>
                     </div>
 
                     <div className={styles.ProfileContainer}>
@@ -47,12 +65,12 @@ const Layout: React.FC<ParamType> = ({ children }) => {
                             const isActive = pathname === data.path;
                             console.log(pathname, data.path, "jfkadlsjfkla");
                             return (
-                                <div key={index} className={`${styles.siderItem} ${isActive ? styles.active : ''}`}
-                                >
-                                    <Link href={data.path}>
+                                <Link href={data.path} key={index} onClick={handleCloseOrOpen}>
+                                    <div className={`${styles.siderItem} ${isActive ? styles.active : ''}`}
+                                    >
                                         <h3><Icon size={20} />{data.name}</h3>
-                                    </Link>
-                                </div>
+                                    </div>
+                                </Link>
                             )
                         })}
                     </div>
@@ -66,7 +84,7 @@ const Layout: React.FC<ParamType> = ({ children }) => {
                     </div>
                 </div>
                 <div className={styles.rightSide}>
-                    {}
+
                     <div className={styles.header}>
                         <div className={styles.searchWrapper}>
                             <input
@@ -81,6 +99,9 @@ const Layout: React.FC<ParamType> = ({ children }) => {
                         </div>
                         <div className={styles.headerLeft}>
                             <div className={styles.headerLeftItems}>
+                                <Link href="/">
+                                    <CiMail size={35} />
+                                </Link>
                                 <Link href="/">
                                     <RxAvatar size={35} />
                                 </Link>

@@ -1,5 +1,5 @@
 import React, { useState, ChangeEvent, FormEvent } from 'react';
-import styles from './homepage.module.css';
+import styles from '../commonStyles/commonStyles.module.css';
 
 type PreviewImage = {
     url: string;
@@ -71,7 +71,7 @@ const HomePage: React.FC = () => {
                         </label>
                         <input
                             id="adDate"
-                            className={styles.input}
+                            className={`${styles.input} ${styles.mInput}`}
                             type="date"
                             value={adDate}
                             onChange={(e) => setAdDate(e.target.value)}

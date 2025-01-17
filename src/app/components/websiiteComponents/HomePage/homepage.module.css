@@ -123,3 +123,19 @@
 .submitButton:hover {
     background-color: #2563eb;
 }
+
+
+@media only screen and (max-width: 767px) {
+    .input {
+        max-width: 100%;
+    }
+
+    .mInput{
+        background-color: white;
+        padding-right: var(--mSpacing4);
+    }
+
+    .uploadArea {
+        max-width: 78.33866666666665vw;
+    }
+}

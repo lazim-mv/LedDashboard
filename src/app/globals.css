@@ -5,7 +5,9 @@
 @tailwind utilities;
 
 :root {
+  --FontSora: "Sora", serif;
   --spacing8: 0.5555555555555556vw;
+  --spacing10: 0.6944444444444444vw;
   --spacing16: 1.1111111111111112vw;
   --spacing14: 0.9722222222222222vw;
   --spacing20: 1.3888888888888888vw;
@@ -13,13 +15,39 @@
   --spacing32: 2.2222222222222223vw;
   --spacing50: 3.4722222222222223vw;
   --spacing70: 4.861111111111112vw;
+
+
+
+  --mSpacing4: 1.0666666666666667vw;
+  --mSpacing8: 2.1333333333333333vw;
+  --mSpacing12: 3.2vw;
+  --mSpacing14: 3.733333333333334vw;
+  --mSpacing15: 4vw;
+  --mSpacing16: 4.266666666666667vw;
+  --mSpacing24: 6.4vw;
+  --mSpacing28: 7.466666666666668vw;
+  --mSpacing30: 8vw;
+  --mSpacing60: 16vw;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body.no-scroll,
+html.no-scroll {
+  overflow: hidden;
 }
 
 body {
   /* background: #E5E5E5; */
-  font-family: "Sora", serif;
+  font-family: var(--FontSora);
 }
 
+h2 {
+  font-size: var(--spacing30);
+}
 
 h3 {
   font-size: var(--spacing16);
@@ -29,4 +57,23 @@ h3 {
 p {
   font-size: var(--spacing14);
   color: #A5B4CB;
+}
+
+@media only screen and (max-width: 767px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  h2 {
+    font-size: var(--mSpacing30);
+  }
+
+  h3 {
+    font-size: var(--mSpacing16);
+  }
+
+  p {
+    font-size: var(--mSpacing12);
+  }
 }
