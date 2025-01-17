@@ -87,7 +87,7 @@ const AboutPage: React.FC = () => {
                         </label>
                         <input
                             id="adDate"
-                            className={styles.input}
+                            className={`${styles.input} ${styles.mInput}`}
                             type="date"
                             value={adDate}
                             onChange={(e) => setAdDate(e.target.value)}

@@ -44,6 +44,10 @@
         padding: .5rem .5rem;
     }
 
+    .tabsNav{
+        margin-bottom: var(--mSpacing24);
+    }
+
     .tab:hover{
         color: #2563eb;
     }
