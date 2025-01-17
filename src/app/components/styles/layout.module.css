@@ -1,0 +1,131 @@
+.mainLayout {
+    display: flex;
+    /* gap: var(--spacing30); */
+}
+
+.sider {
+    width: 18.055555555555554vw;
+    height: 100%;
+    padding: 0 1.3888888888888888vw 0 2.083333333333333vw;
+    background-color: #fff;
+    min-height: 100vh;
+    position: relative;
+    box-shadow: 4px 0 6px -1px rgba(165, 180, 203, 0.2);
+}
+
+.siderTop {
+    height: 5.277777777777778vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 3.4722222222222223vw;
+}
+
+.siderTop h1 {
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.ProfileContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.6944444444444444vw;
+    padding-bottom: var(--spacing16);
+    border-bottom: 1px solid black;
+    margin-bottom: var(--spacing32);
+}
+
+.ProfileIcon {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.profileContent {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3472222222222222vw;
+}
+
+.profileContent h3 {
+    font-weight: 500;
+}
+
+.siderItems {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5277777777777777vw;
+}
+
+.siderItem h3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.1111111111111112vw;
+}
+
+.siderItem:hover {
+    background-color: rgba(103, 101, 101, 0.2);
+    border-radius: var(--spacing8);
+    padding: var(--spacing8);
+}
+
+.active {
+    background-color: rgba(103, 101, 101, 0.2);
+    border-radius: var(--spacing8);
+    padding: var(--spacing8);
+}
+
+.siderBottom {
+    align-content: end;
+    position: absolute;
+    bottom: var(--spacing70);
+    left: var(--spacing30);
+}
+
+.rightSide {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 5.277777777777778vw;
+    align-items: center;
+    width: 100%;
+    padding: 0 var(--spacing30);
+}
+
+.searchWrapper {
+    position: relative;
+    width: 60%;
+}
+
+.searchInput {
+    width: 100%;
+    padding: 8px 16px 8px 40px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.searchInput:focus {
+    outline: none;
+}
+
+.searchIcon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af;
+}
+
+.pagesContainer {
+    padding: 0 var(--spacing30);
+    padding-top: 3.4722222222222223vw;
+    box-shadow: 0 4px 6px -1px rgba(165, 180, 203, 0.2);
+    /* min-height: 85vh; */
+}

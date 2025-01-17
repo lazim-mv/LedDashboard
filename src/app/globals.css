@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --spacing8: 0.5555555555555556vw;
+  --spacing16: 1.1111111111111112vw;
+  --spacing14: 0.9722222222222222vw;
+  --spacing20: 1.3888888888888888vw;
+  --spacing30: 2.083333333333333vw;
+  --spacing32: 2.2222222222222223vw;
+  --spacing50: 3.4722222222222223vw;
+  --spacing70: 4.861111111111112vw;
+}
+
+body {
+  /* background: #E5E5E5; */
+  font-family: "Sora", serif;
+}
+
+
+h3 {
+  font-size: var(--spacing16);
+  color: #141736;
+}
+
+p {
+  font-size: var(--spacing14);
+  color: #A5B4CB;
+}

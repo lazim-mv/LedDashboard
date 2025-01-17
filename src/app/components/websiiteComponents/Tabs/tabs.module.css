@@ -1,0 +1,39 @@
+/* Tabs.module.css */
+.tabsContainer {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.tabsNav {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: var(--spacing30);
+}
+
+.tab {
+    padding: 1rem 0.5rem;
+    padding-top: 0;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.2s ease;
+    color: #000;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.tab:hover {
+    color: #374151;
+}
+
+.activeTab {
+    color: #2563eb;
+}
+
+.activeIndicator {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #2563eb;
+}
